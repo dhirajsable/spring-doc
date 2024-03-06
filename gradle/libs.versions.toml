@@ -1,0 +1,89 @@
+[versions]
+platformLib = "20240303.0401.36"
+springBoot        = "3.2.3"
+springBootSecurity        = "5.8.10"
+springSecurity    = "5.4.6"
+springOAuth    = "3.2.3"
+springCloudVersion= "2020.0.1"
+springCloud       = "2022.0.0"
+pgSql             = "42.3.6"
+micrometer        = "1.10.3"
+commonLogging     = "1.2"
+springAWSCloud    = "2.3.3"
+springSession     = "2021.2.0"
+spotless     = "6.8.0"
+gitProperties     = "2.2.4"
+springManagement     = "1.0.11.RELEASE"
+openapi     = "6.0.0"
+swagger     = "2.19.2"
+docker     = "0.36.0"
+groovy     = "3.0.21"
+kotlin     = "1.9.22"
+resilience4j     = "2.2.0"
+slf4j     = "2.0.12"
+jUnit     = "5.10.2"
+kotlinTest     = "1.9.22"
+mockk     = "1.13.10"
+freefairLombok     = "8.6"
+lombok     = "1.18.30"
+googlejavaformat     = "1.20.0"
+webauthn     = "2.1.0"
+cbor     = "4.5.2"
+swaggerAnnotations     = "2.2.20"
+springDoc     = "2.3.0"
+
+
+[plugins]
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless"}
+gitProperties = { id = "com.gorylenko.gradle-git-properties", version.ref = "gitProperties"}
+springManagement = { id = "io.spring.dependency-management", version.ref = "springManagement"}
+springBoot = { id = "org.springframework.boot", version.ref = "springBoot"}
+springBootSecurity = { id = "org.springframework.security:spring-security-bom", version.ref = "springBootSecurity"}
+openapi = { id = "org.openapi.generator", version.ref = "openapi"}
+swaggerGenerator = { id = "org.hidetake.swagger.generator", version.ref = "swagger"}
+docker = { id = "com.palantir.docker", version.ref = "docker"}
+freefairLombok = { id = "io.freefair.lombok", version.ref = "freefairLombok"}
+
+
+[libraries]
+jwtUtililty = { module = "com.contact.login:jwt-utility", version.ref = "platformLib"}
+springBootBom = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBoot"}
+springCloudBom = { module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "springCloud"}
+kotlinBom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin"}
+resilience4jBom = { module = "io.github.resilience4j:resilience4j-bom", version.ref = "resilience4j"}
+springCloudAwsDependencies = { module = "io.awspring.cloud:spring-cloud-aws-dependencies", version.ref = "springAWSCloud"}
+springSession = { module = "org.springframework.session:spring-session-bom", version.ref = "springSession"}
+micrometer = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "micrometer"}
+commonsLogging = { module = "commons-logging:commons-logging", version.ref = "commonLogging"}
+postgresql = { module = "org.postgresql:postgresql", version.ref = "pgSql"}
+encryptionLib = { module = "com.contact.login:encryption-lib", version.ref = "platformLib"}
+cookieService = { module = "com.contact.login:cookie-service", version.ref = "platformLib"}
+passwordHashing = { module = "com.contact.login:password-hashing", version.ref = "platformLib"}
+csrfValidator = { module = "com.contact.login:csrf-validator", version.ref = "platformLib"}
+groovy = { module = "org.codehaus.groovy:groovy", version.ref = "groovy"}
+slf4jApi = { module = "org.slf4j:slf4j-api", version.ref = "slf4j"}
+junitJupiterApi = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jUnit"}
+junitJupiterEngine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "jUnit"}
+junitJupiterParams = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "jUnit"}
+kotlintest = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlinTest"}
+mockk = { module = "io.mockk:mockk", version.ref = "mockk"}
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok"}
+googlejavaformat = { module = "com.google.googlejavaformat:google-java-format", version.ref = "googlejavaformat"}
+springBootStarterOAuth2Clien2 = { module = "org.springframework.boot:spring-boot-starter-oauth2-client", version.ref = "springOAuth"}
+springBootSecurityStarterOAuth2Clien2 = { module = "org.springframework.security:spring-security-oauth2-client"}
+springBootStarterActuator = { module = "org.springframework.boot:spring-boot-starter-actuator"}
+springBootStarterWeb = { module = "org.springframework.boot:spring-boot-starter-web"}
+springSecurityCore = { module = "org.springframework.security:spring-security-core"}
+springSecurityWeb = { module = "org.springframework.security:spring-security-web"}
+springBootStarterDatJpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa"}
+springBootStarterSecurity = { module = "org.springframework.boot:spring-boot-starter-security"}
+webauthnServerCore = { module = "com.yubico:webauthn-server-core", version.ref = "webauthn"}
+cbor = { module = "com.upokecenter:cbor", version.ref = "cbor"}
+springBootStarterTest = { module = "org.springframework.boot:spring-boot-starter-test"}
+springBootAutoconfigure = { module = "org.springframework.boot:spring-boot-autoconfigure"}
+swaggerAnnotations = { module = "io.swagger.core.v3:swagger-annotations", version.ref = "swaggerAnnotations"}
+springdocOpenapiStarter = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref ="springDoc"}
+
+[bundles]
+testFrameworkCompiler = ["junitJupiterApi", "junitJupiterParams", "kotlintest", "mockk"]
+testFrameworkRuntime = ["junitJupiterEngine"]
