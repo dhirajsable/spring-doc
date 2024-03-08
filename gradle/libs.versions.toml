@@ -39,7 +39,7 @@ gitProperties = { id = "com.gorylenko.gradle-git-properties", version.ref = "git
 springManagement = { id = "io.spring.dependency-management", version.ref = "springManagement"}
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot"}
 springBootSecurity = { id = "org.springframework.security:spring-security-bom", version.ref = "springBootSecurity"}
-openapi = { id = "org.openapi.generator", version.ref = "openapi"}
+openapiGenerator = { id = "org.openapi.generator", version.ref = "openapi"}
 swaggerGenerator = { id = "org.hidetake.swagger.generator", version.ref = "swagger"}
 docker = { id = "com.palantir.docker", version.ref = "docker"}
 freefairLombok = { id = "io.freefair.lombok", version.ref = "freefairLombok"}

@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.spotless)
     alias(libs.plugins.springManagement)
     alias(libs.plugins.springBoot) apply(false)
-    alias(libs.plugins.openapi) apply(false)
+    alias(libs.plugins.openapiGenerator) apply(false)
     alias(libs.plugins.swaggerGenerator) apply(false)
     alias(libs.plugins.docker) apply(false)
     alias(libs.plugins.freefairLombok)
@@ -16,14 +16,6 @@ allprojects {
         plugin("java-library")
         plugin("groovy")
     }
-
-//    spotless {
-//        java {
-//            googleJavaFormat("1.15.0")
-//            indentWithTabs(2)
-//            indentWithSpaces(4)
-//        }
-//    }
 
     java {
         toolchain {

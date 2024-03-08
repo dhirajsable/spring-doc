@@ -4,3 +4,4 @@ plugins {
 
 rootProject.name = "spring-doc"
 include(":springDoc-service")
+include("springDoc-client")
